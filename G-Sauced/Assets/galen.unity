@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd280661590f4c8794ac3e805916bf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  health: 5
   speed: 0
 --- !u!1 &1283211602
 GameObject:
@@ -531,7 +531,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589663680}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.30577204, y: 3.6034396, z: -10}
+  m_LocalPosition: {x: -0.49999875, y: 3.6034396, z: -10}
   m_LocalScale: {x: 2.7797544, y: 3.0281007, z: 1}
   m_Children: []
   m_Father: {fileID: 1776319151}
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 1776319155}
   - component: {fileID: 1776319156}
   - component: {fileID: 1776319157}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: player1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,18 @@ MonoBehaviour:
   m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1776319154}
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnCrouchEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -776,8 +787,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimeBtwAttack: 0.3
+  animator: {fileID: 1776319155}
   attackPos: {fileID: 1283211603}
-  attackRange: 100
+  attackRange: 2.5
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 256

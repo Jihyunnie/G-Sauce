@@ -38,6 +38,11 @@ public class Move2D : MonoBehaviour
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
     }
 
+    public void OnLanding()
+    {
+        animator.SetBool("isAttacking", false);
+    }
+
     private void FixedUpdate()
     {
         controller.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
