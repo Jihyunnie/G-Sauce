@@ -1,0 +1,9 @@
+diff a/G-Sauced/Assets/PlayerAttack.cs b/G-Sauced/Assets/PlayerAttack.cs	(rejected hunks)
+@@ -3,7 +3,6 @@
+ using UnityEngine;
+ 
+ public class PlayerAttack : MonoBehaviour
+-    public float startTimeBtwAttack;
+ {
+     // Start is called before the first frame update
+     void Start()
