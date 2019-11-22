@@ -1,0 +1,13 @@
+diff a/G-Sauced/Assets/CharacterController2D.cs.meta b/G-Sauced/Assets/CharacterController2D.cs.meta	(rejected hunks)
+@@ -1,11 +0,0 @@
+-fileFormatVersion: 2
+-guid: bb1b43f4ed4ea499cb939cd72d113bed
+-MonoImporter:
+-  externalObjects: {}
+-  serializedVersion: 2
+-  defaultReferences: []
+-  executionOrder: 0
+-  icon: {instanceID: 0}
+-  userData: 
+-  assetBundleName: 
+-  assetBundleVariant: 
