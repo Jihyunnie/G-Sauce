@@ -7,6 +7,9 @@ public class PlayerAttack : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
+
+    public Animator animator; 
+
     public Transform attackPos;
     public float attackRange;
 
@@ -30,6 +33,7 @@ public class PlayerAttack : MonoBehaviour
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
+                    animator.SetBool("isAttacking", true);
                     enemiesToDamage[i].GetComponent<Enemy>().takeDamage(damage);  
                 }
             }
@@ -40,7 +44,7 @@ public class PlayerAttack : MonoBehaviour
         }
     }
 
-    void OnDrawGizomosSelected()
+    public void OnDrawGizomosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange); 
